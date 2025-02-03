@@ -48,7 +48,7 @@ def main():
             for shot in shots:
                 if asteroid.collides_with(shot):
                     shot.kill()
-                    asteroid.kill()
+                    asteroid.split()
 
         screen.fill("black")
 
@@ -59,7 +59,7 @@ def main():
         
 
         # limit the framerate to 60 FPS
-        dt = clock.tick(60) / 1000
+        dt = clock.tick(120) / 1000
         
 
 if __name__ == "__main__":
